@@ -1,0 +1,16 @@
+import sqlite3
+conn = sqlite3.connect('applications.db')
+c = conn.cursor()
+c.execute('''CREATE TABLE applications (
+    application_no TEXT PRIMARY KEY,
+    schema_name TEXT,
+    business_name TEXT
+)''')
+c.execute("INSERT INTO applications VALUES ('293BY5NN49J458', 'Rajiv Yuvvikas Scheme', 'Ravi Kirana Store')")
+c.execute("INSERT INTO applications VALUES ('293BY5NN49J459', 'Rajiv Yuvvikas Scheme', 'Yodha cool drinks ')")
+c.execute("INSERT INTO applications VALUES ('293BY5NN49J452', 'Rajiv Yuvvikas Scheme', 'Mangamma coconut shops')")
+c.execute("INSERT INTO applications VALUES ('293BY5NN49J453', 'Rajiv Yuvvikas Scheme', 'Lakshmi fruits shop')")
+c.execute("INSERT INTO applications VALUES ('293BY5NN49J451', 'Rajiv Yuvvikas Scheme', 'Sri durga meeseva')")
+c.execute("INSERT INTO applications VALUES ('293BY5NN49J450', 'Rajiv Yuvvikas Scheme', 'vanga bhojanalayam')")
+conn.commit()
+conn.close()

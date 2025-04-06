@@ -1,0 +1,9 @@
+services:
+  - type: web
+    name: rajiv-verifier
+    env: docker
+    plan: free
+    region: oregon
+    dockerfilePath: ./Dockerfile
+    branch: main
+    healthCheckPath: /
