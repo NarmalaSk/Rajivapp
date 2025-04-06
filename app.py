@@ -26,7 +26,7 @@ def match_business_with_image(business_name, image):
 # Home page
 @app.route('/')
 def index():
-    return render_template("index.html")
+    return render_template("Index.html")
 
 # Verification route
 @app.route('/verify', methods=['POST'])
